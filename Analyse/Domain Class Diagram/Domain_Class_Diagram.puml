@@ -1,0 +1,124 @@
+@startuml
+
+
+Person "0..*" -left-> "0..*" Course : "follows"
+Person "1" -left-* "1..*" Course : "< teaches"
+Person "0..*" .up.* "0..*" Competition : "< participates"
+Person "0..*" .up.* "0..1" Subscription : "< has"
+Person "0..*" .right.* "1" Post : "< written by"
+Course "1..*" ..> "1..*" PriceList : <<use>>
+Subscription "1..*" ..> "1..*" PriceList : <<use>>
+Competition "1..*" ..>  "1..*" PriceList : <<use>>
+Person "1..*" .down.> "0..*" Status : <<use>>
+Subscription ..> SubscriptionName : <<use>>
+
+class Person {
+    -username : string
+    -firstname : string
+    -lastname : string
+    -password : string
+    -email : string?
+    -birthdate : date
+    -address : string?
+    -picturePath : string?
+    -status : Status
+    +Person(...)
+    +Edit()
+    +Delete()
+    +GetPerson() : Person
+    +GetStatus() : string
+    +{static}GetPersById(id : int) : Person
+    +{static}GetByUsername(username : string) : Person
+    +{static}GetStatusById(id : int) : string
+}
+
+enum Status {
+    Climber = 0
+    Professor = 1
+    Admin = 2
+}
+
+Class Subscription {
+    -price : PriceList[]
+    -name : SubscriptionName
+    -expirationDate : datetime
+    +Subscription(...)
+    +Edit()
+    +Delete()
+    +{static}Sub(person : Person, name : string) : int
+    +CancelSubscription(SubId : int) : boolean
+    +GetSubscription() : Subscription
+    +{static}GetSubById(id : int): Subscription
+    +{static}GetByPersonId(id : int) : Subscription
+    +{static}GetByName(name : string) : Subscription
+}
+
+enum SubscriptionName {
+    DailyPass : 0
+    MonthlyPass : 1
+    QuarterlyPass : 2
+    YearlyPass : 3
+}
+
+Class Course {
+    -period[] : datetime
+    -price : PriceList[]
+    -type : string
+    -place : string
+    -maxStudent : int
+    -followers : Person[]?
+    -professor : Person
+    +Course(...)
+    +Edit()
+    +Delete()
+    +GetCourse() : Course
+    +SubToCourse(person : Person)
+    +{static}SubToCourse(CourseId : int, person : Person) : int
+    +{static}CancelSubToCourse(PersonId : int, CourseId : int) : boolean
+    +{static}GetCourseById(id : int) : Course
+    +{static}GetFollowersList(id : int) : Person[]
+    +{static}GetProfessor(id : int) : Person
+}
+
+Class Competition {
+    -period : datetime
+    -price : PriceList[]
+    -type : string
+    -place : string
+    -maxParticipants : int
+    -participants : Person[]
+    -winner : Person?
+    +Competition(...)
+    +Edit()
+    +Delete()
+    +SubToCompetition (person : Person)
+    +EditWinner(Winner : Person)
+    +GetParticipants() : Person[]
+    +GetCompetition() : Competition
+    +{static}SubToCompetition(id : int, person : Person)
+    +{static}GetCompetitionById(id : int) : Competition
+    +{static}GetParticipantsById(id : int) : Person
+}
+
+Class PriceList {
+    -type : string
+    -age : int
+    -price : double
+    -insurance : boolean
+}
+
+Class Post {
+    -authorId : int
+    -title : string
+    -body : string
+    -date : datetime
+    -parentId : int?
+    +Post(...)
+    +Edit()
+    +Delete()
+    +Answer(person : Person)
+    +GetPost() : Post
+    +{static}GetPostById(id : int) : Post
+}
+
+@enduml

@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BuySubscriptionView_Error1" xml:space="preserve">
+    <value>Vous possedez deja un abonnement durant la periode selectionnee. Il se finit le </value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="CompetitionDetailView_Subscription_Message_1" xml:space="preserve">
+    <value>Vous ne possedez pas d'abonnement pour competitions</value>
+  </data>
+  <data name="CompetitionDetailView_Subscription_Message_2" xml:space="preserve">
+    <value>Votre abonnement competitions aura expire a cette date</value>
+  </data>
+  <data name="CompetitionDetailView_Subscription_Message_3" xml:space="preserve">
+    <value>Votre abonnement competitions n'est pas encore actif</value>
+  </data>
+  <data name="CompetitionDetailView_Subscription_Message_4" xml:space="preserve">
+    <value>Votre abonnement competitions est valide</value>
+  </data>
+  <data name="CourseDetailView_ComboBox" xml:space="preserve">
+    <value>-- Professeur --</value>
+  </data>
+  <data name="CourseDetailView_Message_1" xml:space="preserve">
+    <value>Ce cours est supervisé par professeur</value>
+  </data>
+  <data name="CourseDetailView_Sub" xml:space="preserve">
+    <value>S'inscrire</value>
+  </data>
+  <data name="CourseDetailView_Subscription_Message_1" xml:space="preserve">
+    <value>Vous ne possédez pas d'abonnement pour suivre ce cours</value>
+  </data>
+  <data name="CourseDetailView_Subscription_Message_2" xml:space="preserve">
+    <value>Votre abonnement à expiré</value>
+  </data>
+  <data name="CourseDetailView_Subscription_Message_3" xml:space="preserve">
+    <value>Votre abonnement n'est pas encore actif</value>
+  </data>
+  <data name="CourseDetailView_Subscription_Message_4" xml:space="preserve">
+    <value>Vous possédez un abonnement actif</value>
+  </data>
+  <data name="CourseDetailView_Unsub" xml:space="preserve">
+    <value>Se désinscrire</value>
+  </data>
+  <data name="CoursesView_Create" xml:space="preserve">
+    <value>Create course</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="Error_DoesNotExist" xml:space="preserve">
+    <value>N'existe pas</value>
+  </data>
+  <data name="Error_LengthGreaterEqual3" xml:space="preserve">
+    <value>Longueur doit être &gt;= 3</value>
+  </data>
+  <data name="Error_LengthGreaterEqual8" xml:space="preserve">
+    <value>Longueur doit être &gt;= 8</value>
+  </data>
+  <data name="Error_MustMatchConfirmPassword" xml:space="preserve">
+    <value>Confirmation de mot de passe ne matche pas</value>
+  </data>
+  <data name="Error_MustMatchPassword" xml:space="preserve">
+    <value>Mot de passes ne matchent pas</value>
+  </data>
+  <data name="Error_NotAvailable" xml:space="preserve">
+    <value>Pas disponible</value>
+  </data>
+  <data name="Error_PasswordMisMatch" xml:space="preserve">
+    <value>Les mots de passes ne correspondent pas</value>
+  </data>
+  <data name="Error_Password_Format" xml:space="preserve">
+    <value>Le mot de passe doit contenir une maj et un chiffre</value>
+  </data>
+  <data name="Error_PseudoTaken" xml:space="preserve">
+    <value>Ce pseudo a déjà été pris</value>
+  </data>
+  <data name="Error_Required" xml:space="preserve">
+    <value>Requis</value>
+  </data>
+  <data name="Error_WrongMailFormat" xml:space="preserve">
+    <value>Mauvais format de mail</value>
+  </data>
+  <data name="Error_WrongPassword" xml:space="preserve">
+    <value>Mauvais mot de passe</value>
+  </data>
+  <data name="IndexView_Title" xml:space="preserve">
+    <value>Heures d'ouverture Grimp'EPFC</value>
+  </data>
+  <data name="LoginView_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="LoginView_Login" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="LoginView_Message_1" xml:space="preserve">
+    <value>Si vous n'avez pas de pseudo ni de mot de passe, cliquez</value>
+  </data>
+  <data name="LoginView_Message_2" xml:space="preserve">
+    <value>ici</value>
+  </data>
+  <data name="LoginView_Message_3" xml:space="preserve">
+    <value>pour vous enregistrer</value>
+  </data>
+  <data name="LoginView_Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="LoginView_Pseudo" xml:space="preserve">
+    <value>Pseudonyme</value>
+  </data>
+  <data name="LoginView_Title" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="MembersTabName" xml:space="preserve">
+    <value>Membres</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Menu_Buy_Subscription" xml:space="preserve">
+    <value>Acheter un abonnement - </value>
+  </data>
+  <data name="Menu_Competitions" xml:space="preserve">
+    <value>Competitions</value>
+  </data>
+  <data name="Menu_Courses" xml:space="preserve">
+    <value>Cours</value>
+  </data>
+  <data name="Menu_Logout" xml:space="preserve">
+    <value>Se déconnecter</value>
+  </data>
+  <data name="Menu_Profiles" xml:space="preserve">
+    <value>Profils</value>
+  </data>
+  <data name="Menu_Subscriptions" xml:space="preserve">
+    <value>Abonnements</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="SignupView_Email" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="SignupView_FirstName" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="SignupView_LastName" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="SignupView_Login" xml:space="preserve">
+    <value>S'inscrire</value>
+  </data>
+  <data name="SignupView_Message_1" xml:space="preserve">
+    <value>Si vous avez déjà un compte, cliquez</value>
+  </data>
+  <data name="SignupView_Message_2" xml:space="preserve">
+    <value>ici</value>
+  </data>
+  <data name="SignupView_Message_3" xml:space="preserve">
+    <value>pour vous connecter</value>
+  </data>
+  <data name="SignupView_PasswordConfirm" xml:space="preserve">
+    <value>Confirmer le mot de passe</value>
+  </data>
+  <data name="SignupView_Title" xml:space="preserve">
+    <value>S'enregistrer</value>
+  </data>
+</root>

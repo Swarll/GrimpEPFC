@@ -1,0 +1,50 @@
+﻿<f:UserControlBase x:Class="prbd_1920_A02.CompetitionCreateView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:f="clr-namespace:PRBD_Framework;assembly=PRBD_Framework"
+      xmlns:p="clr-namespace:prbd_1920_A02.Properties"
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+      xmlns:local="clr-namespace:prbd_1920_A02"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </UserControl.Resources>
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="31,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Competition informations :"
+                    Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,69,0,0" TextWrapping="Wrap" Text="Type of competition: " VerticalAlignment="Top"
+                    Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,99,0,0" TextWrapping="Wrap" Text="Date: " VerticalAlignment="Top"
+                    Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,127,0,0" TextWrapping="Wrap" Text="Time: " VerticalAlignment="Top"
+                    Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,154,0,0" TextWrapping="Wrap" Text="Place: " VerticalAlignment="Top"
+                    Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,183,0,0" TextWrapping="Wrap" Text="Range of age: " VerticalAlignment="Top"
+                    Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,212,0,0" TextWrapping="Wrap" Text="Nbr of participants: " VerticalAlignment="Top"
+                    Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"/>
+
+        <ComboBox x:Name="comboBoxType"  HorizontalAlignment="Left" Height="23" Margin="177,69,0,0" Text="{Binding Type, UpdateSourceTrigger=PropertyChanged}"
+                 Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}" VerticalAlignment="Top" Width="150"/>
+        <DatePicker HorizontalAlignment="Left" Height="23" Margin="177,99,0,0" SelectedDate="{Binding Date, UpdateSourceTrigger=PropertyChanged}"
+                 Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="177,127,0,0" TextWrapping="Wrap" Text="{Binding Date, UpdateSourceTrigger=PropertyChanged, StringFormat='t'}"
+                 Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="177,154,0,0" TextWrapping="Wrap" Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}"
+                 Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="comboBoxRangeOfAge" HorizontalAlignment="Left" Height="23" Margin="177,183,0,0" Text="{Binding RangeOfAge, UpdateSourceTrigger=PropertyChanged}"
+                 Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="177,212,0,0" Text="{Binding MaxParticipants, UpdateSourceTrigger=PropertyChanged}"
+                 Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}" PreviewTextInput="NumberValidationTextBox" VerticalAlignment="Top" Width="150" />
+
+        <Button Content="Create" Command="{Binding Create}" Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"
+                HorizontalAlignment="Left" Margin="682,305,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" Command="{Binding Cancel}" Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVis}}"
+                HorizontalAlignment="Left" Margin="682,338,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</f:UserControlBase>
